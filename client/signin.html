@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Sign In</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="OneTech shop project">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+  <link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+  <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+  <link rel="stylesheet" type="text/css" href="styles/signin_style.css">
+  <link rel="stylesheet" type="text/css" href="styles/singin_resonsive.css">
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+  <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-auth.js"></script>F
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDAvkhMZE93Rw5nvXmG756TOD-l965vV5s",
+      authDomain: "bookstore-1bed5.firebaseapp.com",
+      databaseURL: "https://bookstore-1bed5-default-rtdb.firebaseio.com",
+      projectId: "bookstore-1bed5",
+      storageBucket: "bookstore-1bed5.appspot.com",
+      messagingSenderId: "1086391048293",
+      appId: "1:1086391048293:web:227c162b8503b4e4510e8c",
+      measurementId: "G-PL5TJ1CG8Q"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <!-- Firebase UI -->
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+  <script src="./js/auth.js"></script>
+
+</head>
+
+<body>
+
+  <div class="super_container">
+
+    <div class="wrapper fadeInDown">
+      <div id="formContent">
+        <!-- Tabs Titles -->
+        <h2 class="active"> <a href="./signin.html">Đăng nhập</a></h2>
+        <h2 class="inactive underlineHover"><a href="./signup.html">Đăng kí</a></h2>
+
+        <!-- Login Form -->
+        <form onsubmit="login(event)">
+          <input type="text" id="username" class="fadeIn input-group second" name="login" placeholder="Username">
+          <input type="password" id="password" class="fadeIn input-group third" name="login" placeholder="Password">
+          <input type="button" id="btn-signin" class="fadeIn fourth" value="Log In">
+        </form>
+
+        <div id="firebaseui-auth-container"></div>
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+          <a class="underlineHover" href="#">Quên mật khẩu?</a>
+        </div>
+
+        
+      </div>
+    </div>
+
+  </div>
+
+ 
+
+  <script type="text/javascript">
+    $('#btn-signin').on('click', function () {
+      var username = $("#username").val();
+      var password = $("#password").val();
+      var request = {
+        username: username,
+        password: password,
+      }
+      $.ajax({
+        url: `http://localhost:5000/auth/login`,
+        method: 'post',
+        dataType: 'json',
+        data: request,
+        success: function (data) {
+          window.location.href =`shop.html?user_id=${data.object._id}`;
+          // document.cookie = "user_id = " + data.data._id;
+        }
+      })
+
+    });
+  </script>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="styles/bootstrap4/popper.js"></script>
+  <script src="styles/bootstrap4/bootstrap.min.js"></script>
+  <script src="plugins/greensock/TweenMax.min.js"></script>
+  <script src="plugins/greensock/TimelineMax.min.js"></script>
+  <script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+  <script src="plugins/greensock/animation.gsap.min.js"></script>
+  <script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+  <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+  <script src="plugins/easing/easing.js"></script>
+  <!-- <script src="js/product_custom.js"></script> -->
+</body>
+
+</html>

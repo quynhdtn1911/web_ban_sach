@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Bookstore</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="OneTech shop project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+<link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="plugins/jquery-ui-1.12.1.custom/jquery-ui.css">
+<link rel="stylesheet" type="text/css" href="styles/shop_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/shop_responsive.css">
+
+</head>
+
+<body>
+
+<div class="super_container">
+	
+	<!-- Header -->
+	
+	<header class="header">
+
+		<!-- Top Bar -->
+
+		<div class="top_bar">
+			<div class="container">
+				<div class="row">
+					<div class="col d-flex flex-row">
+						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="images/phone.png" alt=""></div>+38 068 005 3570</div>
+						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="images/mail.png" alt=""></div><a href="mailto:fastsales@gmail.com">fastsales@gmail.com</a></div>
+						<!-- <div class="top_bar_content ml-auto">
+							<div class="top_bar_user">
+								<div class="user_icon"><img src="images/user.svg" alt=""></div>
+								<div><a href="#">Đăng ký</a></div>
+								<div><a href="#">Đăng nhập</a></div>
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</div>		
+		</div>
+
+		<!-- Header Main -->
+
+		<div class="header_main">
+			<div class="container">
+				<div class="row">
+
+					<!-- Logo -->
+					<div class="col-lg-2 col-sm-3 col-3 order-1">
+						<div class="logo_container">
+							<div class="logo"><a href="#">BOOKSTORE</a></div>
+						</div>
+					</div>
+
+					<!-- Search -->
+					<div class="col-lg-6 col-12 order-lg-2 order-3 text-lg-left text-right">
+						<div class="header_search">
+							<div class="header_search_content">
+								<div class="header_search_form_container">
+									<form action="#" class="header_search_form clearfix">
+										<input id="name" type="search" required="required" class="header_search_input" placeholder="Search for products...">
+										<button id="btn_search" type="button" class="header_search_button trans_300" value="Submit"><img src="images/search.png" alt=""></button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Wishlist -->
+					<div class="col-lg-4 col-9 order-lg-3 order-2 text-lg-left text-right">
+						<div class="wishlist_cart d-flex flex-row align-items-center justify-content-end">
+							<!-- Cart -->
+							<div class="cart">
+								<div class="cart_container d-flex flex-row align-items-center justify-content-end">
+									<div class="cart_icon">
+										<img src="images/cart.png" alt="">
+										<div id="cart_count" class="cart_count"><span>0</span></div>
+									</div>
+									<div class="cart_content">
+										<div class="cart_text"><a id="cart" href="">Giỏ hàng</a></div>
+										<div id="cart_total" class="cart_price"></div>
+									</div>
+								</div>
+							</div>
+							<div class="cart">
+								<div class="cart_container d-flex flex-row align-items-center justify-content-end">
+									<div class="cart_icon">
+										<img src="images/order.png" alt="">
+									</div>
+									<div class="cart_content">
+										<div class="cart_text"><a id="order_link" href="">Đơn hàng</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Main Navigation -->
+
+		<nav class="main_nav">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="main_nav_content d-flex flex-row">
+							<div class="menu_trigger_container ml-auto">
+								<div class="menu_trigger d-flex flex-row align-items-center justify-content-end">
+									<div class="menu_burger">
+										<div class="menu_trigger_text">menu</div>
+										<div class="cat_burger menu_burger_inner"><span></span><span></span><span></span></div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		
+		<!-- Menu -->
+
+		<div class="page_menu">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="page_menu_content">
+							<div class="page_menu_search">
+								<form action="#">
+									<input type="search" required="required" class="page_menu_search_input" placeholder="Search for products...">
+								</form>
+							</div>
+							<ul class="page_menu_nav">
+								<li class="page_menu_item has-children">
+									<a href="#">Language<i class="fa fa-angle-down"></i></a>
+									<ul class="page_menu_selection">
+										<li><a href="#">English<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#">Italian<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#">Spanish<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#">Japanese<i class="fa fa-angle-down"></i></a></li>
+									</ul>
+								</li>
+								<li class="page_menu_item has-children">
+									<a href="#">Currency<i class="fa fa-angle-down"></i></a>
+									<ul class="page_menu_selection">
+										<li><a href="#">US Dollar<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#">EUR Euro<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#">GBP British Pound<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#">JPY Japanese Yen<i class="fa fa-angle-down"></i></a></li>
+									</ul>
+								</li>
+								<li class="page_menu_item">
+									<a href="#">Home<i class="fa fa-angle-down"></i></a>
+								</li>
+								<li class="page_menu_item has-children">
+									<a href="#">Super Deals<i class="fa fa-angle-down"></i></a>
+									<ul class="page_menu_selection">
+										<li><a href="#">Super Deals<i class="fa fa-angle-down"></i></a></li>
+										<li class="page_menu_item has-children">
+											<a href="#">Menu Item<i class="fa fa-angle-down"></i></a>
+											<ul class="page_menu_selection">
+												<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+												<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+												<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+												<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+											</ul>
+										</li>
+										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+									</ul>
+								</li>
+								<li class="page_menu_item has-children">
+									<a href="#">Featured Brands<i class="fa fa-angle-down"></i></a>
+									<ul class="page_menu_selection">
+										<li><a href="#">Featured Brands<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+									</ul>
+								</li>
+								<li class="page_menu_item has-children">
+									<a href="#">Trending Styles<i class="fa fa-angle-down"></i></a>
+									<ul class="page_menu_selection">
+										<li><a href="#">Trending Styles<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+										<li><a href="#">Menu Item<i class="fa fa-angle-down"></i></a></li>
+									</ul>
+								</li>
+								<li class="page_menu_item"><a href="blog.html">blog<i class="fa fa-angle-down"></i></a></li>
+								<li class="page_menu_item"><a href="contact.html">contact<i class="fa fa-angle-down"></i></a></li>
+							</ul>
+							
+							<div class="menu_contact">
+								<div class="menu_contact_item"><div class="menu_contact_icon"><img src="images/phone_white.png" alt=""></div>+38 068 005 3570</div>
+								<div class="menu_contact_item"><div class="menu_contact_icon"><img src="images/mail_white.png" alt=""></div><a href="mailto:fastsales@gmail.com">fastsales@gmail.com</a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<!-- Home -->
+
+	<div class="home">
+		<div class="home_background parallax-window" data-parallax="scroll" data-image-src="images/shop_background.jpg"></div>
+		<div class="home_overlay"></div>
+		<div class="home_content d-flex flex-column align-items-center justify-content-center">
+			<h2 class="home_title">BOOK</h2>
+		</div>
+	</div>
+
+	<!-- Shop -->
+
+	<div class="shop">
+		<div class="container">
+			<div class="row">
+					<div class="shop_content">
+						<div id="product_grid" class="product_grid">
+
+							<!-- Product Item -->
+							<!-- <div class="product_item is_new">
+								<div class="product_border"></div>
+								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/new_5.jpg" alt=""></div>
+								<div class="product_content">
+									<div class="product_price">$225</div>
+									<div class="product_name"><div><a href="#" tabindex="0">Philips BT6900A</a></div></div>
+								</div>
+								<div class="product_fav"><i class="fas fa-heart"></i></div>
+								<ul class="product_marks">
+									<li class="product_mark product_discount">-25%</li>
+									<li class="product_mark product_new">new</li>
+								</ul>
+							</div> -->
+
+							<!-- Product Item -->
+							<!-- <div class="product_item discount">
+								<div class="product_border"></div>
+								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="images/featured_1.png" alt=""></div>
+								<div class="product_content">
+									<div class="product_price">$225<span>$300</span></div>
+									<div class="product_name"><div><a href="#" tabindex="0">Huawei MediaPad...</a></div></div>
+								</div>
+								<div class="product_fav"><i class="fas fa-heart"></i></div>
+								<ul class="product_marks">
+									<li class="product_mark product_discount">-25%</li>
+									<li class="product_mark product_new">new</li>
+								</ul>
+							</div> -->
+
+							<!-- Product Item -->
+						</div>
+
+						<!-- Shop Page Navigation -->
+
+						<!-- <div class="shop_page_nav d-flex flex-row">
+							<div class="page_prev d-flex flex-column align-items-center justify-content-center"><i class="fas fa-chevron-left"></i></div>
+							<ul class="page_nav d-flex flex-row">
+								<li><a href="#">1</a></li>
+								<li><a href="#">2</a></li>
+								<li><a href="#">3</a></li>
+								<li><a href="#">...</a></li>
+								<li><a href="#">21</a></li>
+							</ul>
+							<div class="page_next d-flex flex-column align-items-center justify-content-center"><i class="fas fa-chevron-right"></i></div>
+						</div> -->
+
+					<!-- </div> -->
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="newsletter">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="newsletter_container d-flex flex-lg-row flex-column align-items-lg-center align-items-center justify-content-lg-start justify-content-center">
+						<div class="newsletter_title_container">
+							<div class="newsletter_icon"><img src="images/send.png" alt=""></div>
+							<div class="newsletter_title">Hãy nói với chúng tối ý kiến của bạn!</div>
+							<div class="newsletter_text"><p>...gửi tặng 20% cho lần mua đầu tiên.</p></div>
+						</div>
+						<div class="newsletter_content clearfix">
+							<form action="#" class="newsletter_form">
+								<input type="email" class="newsletter_input" required="required" placeholder="Nhập địa chỉ email của bạn">
+								<button class="newsletter_button">Đăng ký</button>
+							</form>
+							<div class="newsletter_unsubscribe_link"><a href="#">Bỏ đăng ký</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="plugins/greensock/TweenMax.min.js"></script>
+<script src="plugins/greensock/TimelineMax.min.js"></script>
+<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="plugins/greensock/animation.gsap.min.js"></script>
+<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="plugins/Isotope/isotope.pkgd.min.js"></script>
+<script src="plugins/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+<script src="plugins/parallax-js-master/parallax.min.js"></script>
+<!-- <script src="js/shop_custom.js"></script> -->
+</body>
+<script>
+	$( document ).ready(function() {
+		function getUrlParameter(name) {
+			name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+			var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+			var results = regex.exec(location.search);
+			return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+		};
+		const user_id = getUrlParameter('user_id');
+		const getAllBooks = () => {
+			$.ajax({  
+				url:'http://localhost:5000/book',  
+				method:'get',   
+				dataType: 'json', 
+				success:function(response){  
+					if(response){  
+						var htmlBookItem = `<div class="product_grid_border"></div>`
+						var data = response.data
+						var product_grid = $("#product_grid")
+						const localhost_url = 'http://localhost:5000/images/'
+						for(const book of data){
+							let image = localhost_url + (book.image ? book.image : 'default_book_img.jpg')
+							htmlBookItem += `<div class="product_item">
+								<div class="product_border"></div>
+								<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="${image}" alt=""></div>
+								<div class="product_content">
+									<div class="product_price">${book.price}</div>
+									<div class="product_name"><div><a href="/product.html?user_id=${user_id}&&book_id=${book._id}" tabindex="0">${book.name}</a></div></div>
+									</div>
+									<div class="product_fav"><i class="fas fa-heart"></i></div>
+									<ul class="product_marks">
+										<li class="product_mark product_discount">-25%</li>
+										<li class="product_mark product_new">new</li>
+										</ul>
+										</div>`
+						}
+						$("#product_grid").html(htmlBookItem)
+					}else{  
+						alert('some error occurred try again');  
+					}  
+				},  
+				error:function(response){  
+					alert('server error occured')  
+				}  
+			});  
+		}
+		var cartTotal = $("#cart_total")
+		var cartCount = $("#cart_count span")
+		$.ajax({  
+		url: `http://localhost:5000/cart/${user_id}`,  
+		method:'get',   
+		dataType: 'json', 
+		success:function(response){  
+			if(response){  
+				var data = response.data
+				let t = 0
+				for(const book_order of data){
+					let total = book_order.book.price*book_order.quantity
+					t += total
+				}
+				if(t > 0) cartTotal.html(t)
+				if(t > 0) cartCount.html(data.length)
+				getAllBooks()
+				$("#cart").attr('href', `/cart.html?user_id=${user_id}`)
+				$("#order_link").attr('href', `/order.html?user_id=${user_id}`)
+			}else{  
+				alert('some error occurred try again');  
+			}  
+		},  
+		error:function(response){  
+			alert('server error occured')  
+		}  
+	});  
+	const searchBook = (request) => {
+		$.ajax({
+			url: `http://localhost:5000/book/search`,
+			method: 'post',
+			dataType: 'json',
+            data: request,
+			success:function(response){  
+				if(response){  
+					var htmlBookItem = `<div class="product_grid_border"></div>`
+					var data = response
+					var product_grid = $("#product_grid")
+					const localhost_url = 'http://localhost:5000/images/'
+					for(const book of data){
+						let image = localhost_url + (book.image ? book.image : 'default_book_img.jpg')
+						htmlBookItem += `<div class="product_item">
+							<div class="product_border"></div>
+							<div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="${image}" alt=""></div>
+							<div class="product_content">
+								<div class="product_price">${book.price}</div>
+								<div class="product_name"><div><a href="/product.html?user_id=${user_id}&&book_id=${book._id}" tabindex="0">${book.name}</a></div></div>
+								</div>
+								<div class="product_fav"><i class="fas fa-heart"></i></div>
+								<ul class="product_marks">
+									<li class="product_mark product_discount">-25%</li>
+									<li class="product_mark product_new">new</li>
+									</ul>
+									</div>`
+					}
+					$("#product_grid").html(htmlBookItem)
+				}else{  
+					alert('some error occurred try again');  
+				}  
+			},
+			error:function(response){  
+				alert('server error occured')  
+			}  
+		})
+	}
+	$('#btn_search').click(function () {
+		let name = $('#name').val();
+		let request = {
+			name: name
+		}
+		searchBook(request)
+	})
+	})
+</script>
+</html>
